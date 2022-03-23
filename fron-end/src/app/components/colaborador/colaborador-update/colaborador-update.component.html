@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-title>Alterar Colaborador</mat-card-title>
+    <form>
+      <mat-form-field>
+        <input 
+          matInput placeholder="Nome do Colaborador"
+          [(ngModel)] = "colaborador.nome"
+          name="nome"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input 
+          matInput placeholder="CPF:"
+          [(ngModel)] = "colaborador.cpf"
+          name="cpf"
+        >
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Selecione o item</mat-label>
+        <mat-select multiple>
+          <mat-option>
+            ---
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateColaborador()" color="primary">
+      Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+      Cancelar
+    </button>
+
+</mat-card>
